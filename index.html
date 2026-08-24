@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GDG Developer Challenge</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <img
+        src="assets/gdg-header.jpeg.png"
+        class="header-logo"
+        alt="GDG on Campus Taif University"
+    >
+
+    <div class="header-actions">
+
+        <span
+            id="challengeLabel"
+            class="challenge-label"
+        >
+            تحدّي المطوّرين
+        </span>
+
+        <button
+            id="languageBtn"
+            class="language-btn"
+            type="button"
+        >
+            EN
+        </button>
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+
+    <!-- ================= HOME ================= -->
+
+    <section
+        id="home"
+        class="screen active"
+    >
+
+        <div class="home-code">
+            &lt;/&gt;
+        </div>
+
+        <div class="error-code">
+            404
+        </div>
+
+        <div
+            id="missingText"
+            class="missing-text"
+        >
+            شيء ما مفقود.
+        </div>
+
+        <h1 id="homeTitle">
+            هل يمكنك بناء<br>
+            ما يأتي بعد ذلك؟
+        </h1>
+
+        <p
+            id="homeDescription"
+            class="home-description"
+        >
+            اكتشفي الجزء المفقود.<br>
+            فكّري كمطوّرة وابني الحل.
+        </p>
+
+        <button
+            id="startBtn"
+            class="main-btn"
+            type="button"
+        >
+            ابدئي التحدّي ←
+        </button>
+
+        <div class="challenge-flow">
+
+            <span id="flowThink">
+                فكّري
+            </span>
+
+            <i>→</i>
+
+            <span id="flowDebug">
+                حلّلي
+            </span>
+
+            <i>→</i>
+
+            <span id="flowBuild">
+                ابني
+            </span>
+
+            <i>→</i>
+
+            <span id="flowLaunch">
+                أطلقي
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CHALLENGE SELECT ================= -->
+
+    <section
+        id="challengeSelect"
+        class="screen"
+    >
+
+        <div class="step-header">
+
+            <span id="stepOne">
+                الخطوة 01
+            </span>
+
+            <strong id="chooseMission">
+                اختاري التحدّي
+            </strong>
+
+        </div>
+
+
+        <div class="content">
+
+            <p
+                id="pickChallenge"
+                class="eyebrow"
+            >
+                اختاري مهمتك
+            </p>
+
+            <h2 id="challengeTitle">
+                ماذا تريدين أن تحلّي؟
+            </h2>
+
+            <p
+                id="challengeDescription"
+                class="description"
+            >
+                كل تحدٍّ يختبر مهارة مختلفة.
+                اختاري تحديًا واكتشفي الجزء المفقود.
+            </p>
+
+
+            <div class="challenge-grid">
+
+
+                <!-- DEBUG -->
+
+                <button
+                    class="challenge-card"
+                    data-challenge="debug"
+                    type="button"
+                >
+
+                    <div class="challenge-icon">
+                        🐛
+                    </div>
+
+                    <div class="challenge-info">
+
+                        <span>
+                            01
+                        </span>
+
+                        <h3
+                            data-ar="اكتشفي الخطأ"
+                            data-en="DEBUG IT"
+                        >
+                            اكتشفي الخطأ
+                        </h3>
+
+                        <p
+                            data-ar="ابحثي عن الخطأ في الكود وأصلحيه."
+                            data-en="Find the bug in the code and fix it."
+                        >
+                            ابحثي عن الخطأ في الكود وأصلحيه.
+                        </p>
+
+                    </div>
+
+                    <b>
+                        ←
+                    </b>
+
+                </button>
+
+
+
+                <!-- SECURITY -->
+
+                <button
+                    class="challenge-card"
+                    data-challenge="security"
+                    type="button"
+                >
+
+                    <div class="challenge-icon">
+                        🔐
+                    </div>
+
+                    <div class="challenge-info">
+
+                        <span>
+                            02
+                        </span>
+
+                        <h3
+                            data-ar="أمّني النظام"
+                            data-en="SECURE IT"
+                        >
+                            أمّني النظام
+                        </h3>
+
+                        <p
+                            data-ar="اختاري القرار الأكثر أمانًا."
+                            data-en="Choose the safest security decision."
+                        >
+                            اختاري القرار الأكثر أمانًا.
+                        </p>
+
+                    </div>
+
+                    <b>
+                        ←
+                    </b>
+
+                </button>
+
+
+
+                <!-- AI -->
+
+                <button
+                    class="challenge-card"
+                    data-challenge="ai"
+                    type="button"
+                >
+
+                    <div class="challenge-icon">
+                        🤖
+                    </div>
+
+                    <div class="challenge-info">
+
+                        <span>
+                            03
+                        </span>
+
+                        <h3
+                            data-ar="شخّصي الذكاء الاصطناعي"
+                            data-en="FIX THE AI"
+                        >
+                            شخّصي الذكاء الاصطناعي
+                        </h3>
+
+                        <p
+                            data-ar="اكتشفي سبب النتيجة الغريبة."
+                            data-en="Find out why the AI gives strange results."
+                        >
+                            اكتشفي سبب النتيجة الغريبة.
+                        </p>
+
+                    </div>
+
+                    <b>
+                        ←
+                    </b>
+
+                </button>
+
+
+
+                <!-- PERFORMANCE -->
+
+                <button
+                    class="challenge-card"
+                    data-challenge="performance"
+                    type="button"
+                >
+
+                    <div class="challenge-icon">
+                        ⚡
+                    </div>
+
+                    <div class="challenge-info">
+
+                        <span>
+                            04
+                        </span>
+
+                        <h3
+                            data-ar="حسّني الأداء"
+                            data-en="OPTIMIZE IT"
+                        >
+                            حسّني الأداء
+                        </h3>
+
+                        <p
+                            data-ar="اختاري التغيير الذي يجعل التطبيق أسرع."
+                            data-en="Choose the change that makes the app faster."
+                        >
+                            اختاري التغيير الذي يجعل التطبيق أسرع.
+                        </p>
+
+                    </div>
+
+                    <b>
+                        ←
+                    </b>
+
+                </button>
+
+
+
+                <!-- UX -->
+
+                <button
+                    class="challenge-card"
+                    data-challenge="ux"
+                    type="button"
+                >
+
+                    <div class="challenge-icon">
+                        📱
+                    </div>
+
+                    <div class="challenge-info">
+
+                        <span>
+                            05
+                        </span>
+
+                        <h3
+                            data-ar="أصلحي تجربة المستخدم"
+                            data-en="FIX THE UX"
+                        >
+                            أصلحي تجربة المستخدم
+                        </h3>
+
+                        <p
+                            data-ar="اكتشفي المشكلة في الواجهة."
+                            data-en="Find the UX problem in the interface."
+                        >
+                            اكتشفي المشكلة في الواجهة.
+                        </p>
+
+                    </div>
+
+                    <b>
+                        ←
+                    </b>
+
+                </button>
+
+
+
+                <!-- CLOUD -->
+
+                <button
+                    class="challenge-card"
+                    data-challenge="cloud"
+                    type="button"
+                >
+
+                    <div class="challenge-icon">
+                        ☁️
+                    </div>
+
+                    <div class="challenge-info">
+
+                        <span>
+                            06
+                        </span>
+
+                        <h3
+                            data-ar="ابني مسار السحابة"
+                            data-en="BUILD THE CLOUD FLOW"
+                        >
+                            ابني مسار السحابة
+                        </h3>
+
+                        <p
+                            data-ar="رتّبي رحلة الملف إلى التخزين السحابي."
+                            data-en="Arrange the file journey to cloud storage."
+                        >
+                            رتّبي رحلة الملف إلى التخزين السحابي.
+                        </p>
+
+                    </div>
+
+                    <b>
+                        ←
+                    </b>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CHALLENGE ================= -->
+
+    <section
+        id="challenge"
+        class="screen"
+    >
+
+        <div class="step-header">
+
+            <span id="challengeStep">
+                الخطوة 02
+            </span>
+
+            <strong id="challengeType">
+                تحدٍّ
+            </strong>
+
+        </div>
+
+
+        <div class="content">
+
+            <p
+                id="challengeEyebrow"
+                class="eyebrow"
+            >
+                اكتشفي المشكلة
+            </p>
+
+            <h2 id="challengeQuestion">
+                هناك شيء لا يعمل.
+            </h2>
+
+            <p
+                id="challengeScenario"
+                class="description"
+            ></p>
+
+
+            <div
+                id="workspace"
+                class="workspace"
+            ></div>
+
+
+            <p
+                id="challengeHint"
+                class="hint"
+            ></p>
+
+
+            <button
+                id="solveBtn"
+                class="main-btn"
+                type="button"
+            >
+                تحققي من الحل ←
+            </button>
+
+
+            <button
+                id="backToChallengesBtn"
+                class="text-btn"
+                type="button"
+            >
+                ← العودة إلى التحديات
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= BUILD ================= -->
+
+    <section
+        id="build"
+        class="screen"
+    >
+
+        <div class="step-header">
+
+            <span>
+                الخطوة 03
+            </span>
+
+            <strong id="buildStepTitle">
+                تثبيت الحل
+            </strong>
+
+        </div>
+
+
+        <div class="content">
+
+            <p class="eyebrow">
+                DEVELOPER MODE
+            </p>
+
+            <h2 id="buildTitle">
+                ثبّتي الحل.
+            </h2>
+
+            <p
+                id="buildDescription"
+                class="description"
+            >
+                راجعي اختيارك ثم أكدي الحل.
+            </p>
+
+
+            <div
+                id="builderWorkspace"
+                class="builder-workspace"
+            ></div>
+
+
+            <button
+                id="testBuildBtn"
+                class="main-btn"
+                type="button"
+            >
+                تأكيد الحل ←
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= RESULT ================= -->
+
+    <section
+        id="result"
+        class="screen"
+    >
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <p
+            id="completeLabel"
+            class="eyebrow"
+        >
+            اكتمل التحدّي
+        </p>
+
+        <h2 id="resultTitle">
+            وجدتِ الجزء المفقود.
+        </h2>
+
+
+        <div class="result-card">
+
+            <div class="result-row">
+
+                <span id="resultProblemLabel">
+                    المشكلة
+                </span>
+
+                <strong id="resultProblem">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="result-row">
+
+                <span id="resultFixLabel">
+                    الحل
+                </span>
+
+                <strong id="resultFix">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="result-row">
+
+                <span id="resultSkillLabel">
+                    المهارة
+                </span>
+
+                <strong id="resultSkill">
+                    —
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="final-message">
+
+            <strong id="finalMessage">
+                الآن ابنِي ما يأتي بعد ذلك.
+            </strong>
+
+            <span>
+                🚀
+            </span>
+
+        </div>
+
+
+        <div class="gdg-badge">
+            GDG DEVELOPER CHALLENGE
+        </div>
+
+
+      
+
+
+        <div class="result-actions">
+
+            <button
+                id="nextChallengeBtn"
+                class="secondary-btn"
+                type="button"
+            >
+                تحدٍّ آخر ↻
+            </button>
+
+            <button
+                id="homeBtn"
+                class="secondary-btn"
+                type="button"
+            >
+                البداية
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer id="footerText">
+    GDG on Campus • Taif University
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

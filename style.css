@@ -1,0 +1,880 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,"Segoe UI",sans-serif;
+    background:#f8f9fa;
+    color:#202124;
+    min-height:100vh;
+}
+
+button{
+    font-family:inherit;
+}
+
+.header{
+    width:100%;
+    min-height:90px;
+    background:#fff;
+    border-bottom:1px solid #e5e7eb;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 7%;
+}
+
+.header-logo{
+    width:280px;
+    max-width:48vw;
+    object-fit:contain;
+}
+
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.challenge-label{
+    color:#9aa0a6;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:1.5px;
+}
+
+.language-btn{
+    border:1px solid #dadce0;
+    background:#fff;
+    color:#202124;
+    border-radius:25px;
+    padding:9px 18px;
+    font-size:14px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.language-btn:hover{
+    background:#f1f3f4;
+    border-color:#c7c9cc;
+}
+
+.container{
+    width:min(1040px,92%);
+    margin:42px auto;
+}
+
+.screen{
+    display:none;
+    position:relative;
+    background:#fff;
+    border:1px solid #e1e4e8;
+    border-radius:28px;
+    padding:58px 70px;
+    min-height:650px;
+    overflow:hidden;
+}
+
+.screen.active{
+    display:flex;
+    flex-direction:column;
+}
+
+.content{
+    width:100%;
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+/* ================= HOME ================= */
+
+.home-code{
+    text-align:right;
+    color:#aecbfa;
+    font-size:22px;
+    font-weight:800;
+}
+
+.error-code{
+    text-align:center;
+    font-size:clamp(120px,18vw,190px);
+    line-height:.9;
+    font-weight:900;
+}
+
+.missing-text{
+    text-align:center;
+    color:#4285f4;
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:4px;
+    margin:24px 0;
+}
+
+h1{
+    text-align:center;
+    font-size:clamp(44px,6vw,68px);
+    line-height:1.12;
+    margin:0 0 22px;
+    font-weight:800;
+}
+
+h2{
+    font-size:42px;
+    line-height:1.25;
+    margin:0 0 18px;
+}
+
+.home-description,
+.description{
+    color:#5f6368;
+    font-size:18px;
+    line-height:1.8;
+    white-space:pre-line;
+}
+
+/* ================= BUTTONS ================= */
+
+.main-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    background:#4285f4;
+    color:#fff;
+    border:0;
+    border-radius:14px;
+    padding:15px 28px;
+    font-size:16px;
+    font-weight:800;
+    cursor:pointer;
+    transition:.2s;
+    margin-top:28px;
+}
+
+.main-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 22px rgba(66,133,244,.22);
+}
+
+.main-btn:disabled{
+    opacity:.65;
+    cursor:not-allowed;
+    transform:none;
+}
+
+.secondary-btn{
+    background:#fff;
+    color:#4285f4;
+    border:1px solid #4285f4;
+    border-radius:14px;
+    padding:12px 22px;
+    font-size:14px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.secondary-btn:hover{
+    background:#f8fbff;
+    transform:translateY(-1px);
+}
+
+.text-btn{
+    border:0;
+    background:none;
+    color:#5f6368;
+    cursor:pointer;
+    margin-top:14px;
+    font-size:13px;
+}
+
+.text-btn:hover{
+    color:#4285f4;
+}
+
+/* ================= FLOW ================= */
+
+.challenge-flow{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    margin-top:45px;
+    color:#9aa0a6;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.challenge-flow i{
+    color:#4285f4;
+    font-style:normal;
+}
+
+/* ================= STEP HEADER ================= */
+
+.step-header{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#9aa0a6;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:1.5px;
+    margin-bottom:45px;
+}
+
+.step-header strong{
+    color:#4285f4;
+}
+
+/* ================= TEXT ================= */
+
+.eyebrow{
+    color:#4285f4;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:2px;
+    margin-bottom:15px;
+}
+
+/* ================= CHALLENGE SELECT ================= */
+
+.challenge-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+    margin-top:30px;
+}
+
+.challenge-card{
+    width:100%;
+    min-height:125px;
+    background:#fff;
+    border:1px solid #e1e5ea;
+    border-radius:18px;
+    padding:20px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    text-align:right;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.challenge-card:hover{
+    border-color:#4285f4;
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(66,133,244,.08);
+}
+
+.challenge-icon{
+    flex:0 0 52px;
+    width:52px;
+    height:52px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#f8f9fa;
+    border-radius:14px;
+    font-size:29px;
+}
+
+.challenge-info{
+    flex:1;
+}
+
+.challenge-info span{
+    font-size:10px;
+    color:#9aa0a6;
+    font-weight:800;
+}
+
+.challenge-info h3{
+    font-size:16px;
+    margin:6px 0;
+}
+
+.challenge-info p{
+    font-size:13px;
+    color:#80868b;
+    line-height:1.5;
+}
+
+.challenge-card b{
+    color:#9aa0a6;
+    font-size:20px;
+}
+
+/* ================= WORKSPACE ================= */
+
+.workspace{
+    width:100%;
+    margin:32px auto 18px;
+}
+
+/* ================= CHOICE CHALLENGES ================= */
+
+.choice-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+}
+
+.choice-card{
+    width:100%;
+    min-height:105px;
+    background:#fff;
+    border:1px solid #dadce0;
+    border-radius:18px;
+    padding:18px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    text-align:right;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.choice-card:hover{
+    border-color:#4285f4;
+    transform:translateY(-2px);
+    box-shadow:0 7px 18px rgba(66,133,244,.06);
+}
+
+.choice-card.selected{
+    border:2px solid #4285f4;
+    background:#f8fbff;
+}
+
+.choice-card.correct{
+    border:2px solid #34a853;
+    background:#f1f8f4;
+}
+
+.choice-card.wrong{
+    border:2px solid #ea4335;
+    background:#fff5f4;
+}
+
+.choice-number{
+    min-width:38px;
+    height:38px;
+    border-radius:12px;
+    background:#f1f3f4;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:800;
+    color:#5f6368;
+}
+
+.choice-text{
+    flex:1;
+    line-height:1.6;
+    font-size:15px;
+}
+
+.choice-mark{
+    width:24px;
+    font-size:20px;
+    font-weight:800;
+}
+
+/* ================= CODE ================= */
+
+.code-box{
+    background:#202124;
+    color:#e8eaed;
+    border-radius:18px;
+    padding:24px;
+    text-align:left;
+    direction:ltr;
+    font-family:"SFMono-Regular",Consolas,monospace;
+    font-size:14px;
+    line-height:1.8;
+    overflow:auto;
+    margin-bottom:18px;
+}
+
+.code-line{
+    display:block;
+    padding:7px 10px;
+    border-radius:7px;
+}
+
+.code-line.clickable{
+    cursor:pointer;
+}
+
+.code-line.clickable:hover{
+    background:#303134;
+}
+
+.code-line.selected{
+    background:rgba(66,133,244,.25);
+    outline:1px solid #4285f4;
+}
+
+.code-line.correct{
+    background:rgba(52,168,83,.25);
+    outline:1px solid #34a853;
+}
+
+.code-line.wrong{
+    background:rgba(234,67,53,.25);
+    outline:1px solid #ea4335;
+}
+
+/* ================= ORDER CHALLENGE ================= */
+
+.order-builder{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    text-align:right;
+}
+
+.order-panel{
+    border:1px solid #e1e5ea;
+    border-radius:18px;
+    padding:18px;
+    background:#fafafa;
+}
+
+.order-panel h3{
+    font-size:12px;
+    color:#9aa0a6;
+    letter-spacing:1.5px;
+    margin-bottom:12px;
+}
+
+.order-list{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    min-height:220px;
+}
+
+.order-item{
+    width:100%;
+    background:#fff;
+    border:1px solid #dadce0;
+    border-radius:12px;
+    padding:13px 15px;
+    cursor:pointer;
+    transition:.2s;
+    text-align:right;
+    color:#202124;
+    font-size:14px;
+}
+
+.order-item:hover{
+    border-color:#4285f4;
+    transform:translateY(-1px);
+}
+
+.order-item.selected{
+    border-color:#4285f4;
+    background:#f8fbff;
+}
+
+.order-item.disabled{
+    opacity:.4;
+    pointer-events:none;
+}
+
+.selected-order{
+    min-height:220px;
+    border:2px dashed #d2e3fc;
+    border-radius:14px;
+    padding:12px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.selected-order:empty::before{
+    content:"اختاري العناصر بالترتيب";
+    color:#9aa0a6;
+    font-size:13px;
+    text-align:center;
+    margin:auto;
+}
+
+.selected-order .order-item{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+.selected-order .order-item::before{
+    content:attr(data-index);
+    flex:0 0 26px;
+    width:26px;
+    height:26px;
+    border-radius:50%;
+    background:#4285f4;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+    font-weight:800;
+}
+
+/* ================= REVIEW ================= */
+
+.builder-workspace{
+    margin-top:28px;
+}
+
+.review-card{
+    border:1px solid #e1e5ea;
+    border-radius:20px;
+    background:#fafafa;
+    padding:25px;
+    text-align:right;
+}
+
+.review-title{
+    color:#4285f4;
+    font-weight:800;
+    font-size:12px;
+    letter-spacing:1.5px;
+    margin-bottom:15px;
+}
+
+.review-answer{
+    background:#fff;
+    border:1px solid #dadce0;
+    border-radius:14px;
+    padding:16px;
+    line-height:1.7;
+    white-space:pre-line;
+}
+
+/* ================= FEEDBACK ================= */
+
+.feedback{
+    min-height:24px;
+    margin-top:15px;
+    font-size:14px;
+    font-weight:800;
+}
+
+.feedback.success{
+    color:#188038;
+}
+
+.feedback.error{
+    color:#d93025;
+}
+
+/* ================= HINT ================= */
+
+.hint{
+    color:#9aa0a6;
+    font-size:13px;
+    margin-top:16px;
+}
+
+/* ================= RESULT ================= */
+
+.success-icon{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:#e6f4ea;
+    color:#34a853;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:38px;
+    font-weight:900;
+    margin:0 auto 20px;
+}
+
+.result-card{
+    width:100%;
+    max-width:720px;
+    background:#fafafa;
+    border:1px solid #e5e7eb;
+    border-radius:20px;
+    padding:24px;
+    margin:25px auto;
+    text-align:right;
+}
+
+.result-row{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+    padding:16px 0;
+    border-bottom:1px solid #e5e7eb;
+}
+
+.result-row:last-child{
+    border-bottom:0;
+}
+
+.result-row span{
+    color:#4285f4;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:1.5px;
+}
+
+.result-row strong{
+    color:#3c4043;
+    line-height:1.7;
+    font-size:15px;
+}
+
+.final-message{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    margin:12px 0 22px;
+    font-size:15px;
+}
+
+.gdg-badge{
+    color:#4285f4;
+    border:1px solid #d2e3fc;
+    background:#f8fbff;
+    border-radius:20px;
+    padding:9px 18px;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:1px;
+    margin:0 auto 12px;
+}
+
+.campus-name{
+    color:#9aa0a6;
+    font-size:13px;
+    margin-bottom:18px;
+}
+
+.result-actions{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    text-align:center;
+    color:#9aa0a6;
+    font-size:13px;
+    margin:25px 0 40px;
+}
+
+/* ================= RTL ================= */
+
+[dir="rtl"] .header{
+    direction:rtl;
+}
+
+[dir="rtl"] .header-actions{
+    direction:rtl;
+}
+
+[dir="rtl"] .challenge-card,
+[dir="rtl"] .choice-card,
+[dir="rtl"] .order-panel,
+[dir="rtl"] .review-card,
+[dir="rtl"] .result-card{
+    text-align:right;
+}
+
+[dir="rtl"] .step-header{
+    direction:rtl;
+}
+
+/* ================= LTR ================= */
+
+[dir="ltr"] .header{
+    direction:ltr;
+}
+
+[dir="ltr"] .header-actions{
+    direction:ltr;
+}
+
+[dir="ltr"] .challenge-card,
+[dir="ltr"] .choice-card,
+[dir="ltr"] .order-panel,
+[dir="ltr"] .review-card,
+[dir="ltr"] .result-card{
+    text-align:left;
+}
+
+[dir="ltr"] .code-box{
+    text-align:left;
+}
+
+[dir="ltr"] .step-header{
+    direction:ltr;
+}
+
+[dir="ltr"] .selected-order .order-item{
+    text-align:left;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:760px){
+
+    .header{
+        min-height:75px;
+        padding:0 5%;
+    }
+
+    .header-logo{
+        width:210px;
+        max-width:62vw;
+    }
+
+    .challenge-label{
+        display:none;
+    }
+
+    .container{
+        width:94%;
+        margin:25px auto;
+    }
+
+    .screen{
+        padding:38px 22px;
+        min-height:620px;
+        border-radius:22px;
+    }
+
+    .error-code{
+        font-size:110px;
+    }
+
+    h1{
+        font-size:40px;
+    }
+
+    h2{
+        font-size:30px;
+    }
+
+    .home-description,
+    .description{
+        font-size:16px;
+    }
+
+    .challenge-grid,
+    .choice-grid,
+    .order-builder{
+        grid-template-columns:1fr;
+    }
+
+    .challenge-card{
+        min-height:110px;
+    }
+
+    .step-header{
+        margin-bottom:30px;
+    }
+
+    .code-box{
+        font-size:12px;
+        padding:15px;
+    }
+
+    .choice-card{
+        min-height:90px;
+    }
+
+    .selected-order{
+        min-height:180px;
+    }
+}
+
+@media(max-width:480px){
+
+    .header-logo{
+        width:185px;
+    }
+
+    .screen{
+        padding:30px 16px;
+    }
+
+    .challenge-flow{
+        gap:8px;
+        font-size:9px;
+    }
+
+    .choice-card{
+        padding:14px;
+    }
+
+    .choice-text{
+        font-size:14px;
+    }
+
+    .challenge-card{
+        padding:15px;
+    }
+
+    .challenge-icon{
+        flex-basis:45px;
+        width:45px;
+        height:45px;
+        font-size:24px;
+    }
+}
+/* ================= DRAG & DROP ================= */
+
+.order-item{
+    user-select:none;
+    -webkit-user-select:none;
+    cursor:grab;
+}
+
+.order-item:active{
+    cursor:grabbing;
+}
+
+.order-item.dragging{
+    opacity:.45;
+    transform:scale(.98);
+}
+
+.order-list,
+.selected-order{
+    transition:.2s;
+}
+
+.order-list.drag-over,
+.selected-order.drag-over{
+    border-color:#4285f4;
+    background:#f8fbff;
+}
+
+.selected-order .order-item{
+    cursor:grab;
+}
+
+.selected-order .order-item::after{
+    content:"↕";
+    margin-right:auto;
+    color:#9aa0a6;
+    font-size:16px;
+}
