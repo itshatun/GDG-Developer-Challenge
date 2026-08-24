@@ -422,12 +422,7 @@ function updateLanguageUI(){
             : "PICK YOUR MISSION"
     );
 
-    setText(
-        "challengeTitle",
-        language === "ar"
-            ? "ماذا تريدين أن تحلّي؟"
-            : "What do you want to solve?"
-    );
+   setText("challengeTitle", language === "ar" ? "ما الذي تريدين حله؟" : "What do you want to solve?");
 
     setText(
         "challengeDescription",
