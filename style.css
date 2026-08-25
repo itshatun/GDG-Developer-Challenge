@@ -878,3 +878,24 @@ footer{
     color:#9aa0a6;
     font-size:16px;
 }
+/* Linktree QR Code */
+
+.linktree-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.linktree-text {
+    color: #6b7280;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.linktree-qr {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+}
